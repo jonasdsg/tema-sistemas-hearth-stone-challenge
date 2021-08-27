@@ -4,12 +4,15 @@ import static java.util.stream.Collectors.toList;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import br.com.temasistemas.hearthstone.dtos.CartaDTO;
 import br.com.temasistemas.hearthstone.exceptions.FalhaAoMapearObjeto;
 import br.com.temasistemas.hearthstone.model.Carta;
 import br.com.temasistemas.hearthstone.model.Classe;
 import br.com.temasistemas.hearthstone.model.Tipo;
 
+@Component
 public class CartaMapper implements Mapper<CartaDTO, Carta> {
 
     @Override
