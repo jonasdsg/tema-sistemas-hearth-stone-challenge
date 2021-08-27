@@ -14,6 +14,8 @@ public class Atributos {
     @Enumerated(STRING)
     private Classe classe;
 
+    @Deprecated
+    public Atributos(){} //Construtor JPA
     public Atributos(Integer ataque, Integer defesa, Tipo tipo, Classe classe) {
         this.ataque = ataque;
         this.defesa = defesa;
