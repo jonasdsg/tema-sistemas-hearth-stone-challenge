@@ -9,9 +9,13 @@ public enum Tipo {
 
     public static Tipo parse(String tipo) {
         if (nonNull(tipo)) {
-            return MAGIA.toString().toLowerCase().equals(tipo.toLowerCase())
-             ? MAGIA : CRIATURA;
+            try {
+                return MAGIA.toString().toLowerCase().equals(tipo.toLowerCase()) ? MAGIA : CRIATURA;
+            } 
+            catch (Exception e) {
+                throw new FalhaAoConverterEnumeradoObjetoNulo("Falha ao converter o enum Tipo");
+            }
         }
-        throw new FalhaAoConverterEnumeradoObjetoNulo("Falha ao converter o enum Tipo");
+        return null;
     }
 }

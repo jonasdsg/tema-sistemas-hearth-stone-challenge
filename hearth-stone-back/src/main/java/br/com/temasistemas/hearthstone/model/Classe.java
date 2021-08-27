@@ -11,11 +11,16 @@ public enum Classe {
     MAGO, PALADINO, CACADOR, DRUIDA, QUALQUER;
 
     public static Classe parse(String classe) {
-        Optional<Classe> op = asList(MAGO, PALADINO, CACADOR, DRUIDA, QUALQUER).stream()
-                .filter(c -> c.toString().toLowerCase().equals(classe)).findFirst();
-        if (nonNull(op.get())) {
-            return op.get();
+        if (nonNull(classe)) {
+            try {
+                Optional<Classe> op = asList(MAGO, PALADINO, CACADOR, DRUIDA, QUALQUER).stream()
+                        .filter(c -> c.toString().toLowerCase().equals(classe.toLowerCase())).findFirst();
+                return op.get();
+            } 
+            catch (Exception e) {
+                throw new FalhaAoConverterEnumeradoObjetoNulo("O enum Classe não pode ser nulo!");
+            }
         }
-        throw new FalhaAoConverterEnumeradoObjetoNulo("O enum Classe não pode ser nulo!");
+        return null;
     }
 }
