@@ -27,4 +27,8 @@ public class CartaService {
         return cartaMapper.toListDTO(cartaRepository.findCardsUsingParameters(id,nome,descricao,ataque,defesa,Tipo.parse(tipo), Classe.parse(classe)));
     }
 
+    public CartaDTO salvar(CartaDTO carta) {
+        return cartaMapper.toDTO(cartaRepository.save(cartaMapper.toModel(carta)));
+    }
+
 }
