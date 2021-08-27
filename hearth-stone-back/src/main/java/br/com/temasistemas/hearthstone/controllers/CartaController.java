@@ -1,5 +1,7 @@
 package br.com.temasistemas.hearthstone.controllers;
 
+import static java.util.Objects.isNull;
+
 import java.util.List;
 
 import javax.validation.Valid;
@@ -8,7 +10,9 @@ import javax.websocket.server.PathParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -42,5 +46,14 @@ public class CartaController {
     public ResponseEntity<CartaDTO> salvar(@RequestBody @Valid CartaDTO carta,UriComponentsBuilder uriBuilder){
         CartaDTO dto = service.salvar(carta); 
         return ResponseEntity.created(uriBuilder.path("/carta/:id").buildAndExpand(dto.id).toUri()).body(dto);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> delete(@PathVariable("id") Long id){
+        if(isNull(id)){
+            return ResponseEntity.badRequest().build();
+        }
+        service.delete(id);
+        return ResponseEntity.ok().build();
     }
 }

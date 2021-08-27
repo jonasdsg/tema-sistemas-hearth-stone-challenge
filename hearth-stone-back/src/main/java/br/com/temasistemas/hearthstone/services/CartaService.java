@@ -31,4 +31,8 @@ public class CartaService {
         return cartaMapper.toDTO(cartaRepository.save(cartaMapper.toModel(carta)));
     }
 
+    public void delete(Long id){
+        cartaRepository.deleteById(id);
+    }
+
 }
