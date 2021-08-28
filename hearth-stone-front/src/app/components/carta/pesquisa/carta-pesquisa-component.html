@@ -1,0 +1,22 @@
+<div class="container">
+    <p *ngIf="info" class="alert" [ngClass]="info.alerta">{{info.message}}</p>
+</div>
+<carta-component
+    nomeDoBotao="Pesquisar"
+    nomeDaTela="Pesquisar Cartas"
+    (aoEmitirCarta)="pesquisar($event)">
+</carta-component>
+<div class="container mt-4">
+    <div class="row">
+        <div class="card col-md-3" style="width: 18rem;"  *ngFor="let carta of cartas">
+            <img [src]="getLink(carta.classe)" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{carta.nome}}</h5>  
+              <p class="card-text">{{carta.descricao}}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item" *ngFor="let atributo of atributos">{{getValordoAtributo(atributo,carta)}}</li>
+            </ul>
+        </div>
+    </div>
+</div>

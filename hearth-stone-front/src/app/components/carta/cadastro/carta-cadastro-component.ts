@@ -1,7 +1,6 @@
-import { CartaService } from './../carta.service';
-import { Carta } from './../../../models/Carta.model';
 import { Component } from "@angular/core";
-import { timeStamp } from 'console';
+import { Carta } from './../../../models/Carta.model';
+import { CartaService } from './../carta.service';
 
 @Component({
     templateUrl: './carta-cadastro-component.html'

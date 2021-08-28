@@ -1,3 +1,4 @@
+import { CartaPesquisaComponent } from './pesquisa/carta-pesquisa-component';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -11,6 +12,7 @@ import { CartaCadastroComponent } from './cadastro/carta-cadastro-component';
     declarations: [
         CartaComponent,    
         CartaCadastroComponent,
+        CartaPesquisaComponent,
     ],
     imports: [ReactiveFormsModule, HttpClientModule, CommonModule],
     exports: [CartaRouting]
