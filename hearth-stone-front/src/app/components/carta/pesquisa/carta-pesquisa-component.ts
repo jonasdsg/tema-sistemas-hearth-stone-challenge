@@ -10,11 +10,13 @@ export class CartaPesquisaComponent {
     public cartas: Carta[]
     public atributos = ['ataque', 'defesa', 'tipo', 'classe'];
     public imagens = IMAGENS;
+    public pesquisado = false;
     constructor(private cartaService: CartaService) { }
 
     pesquisar(carta: Carta) {
         this.cartaService.procurar(this.getParams(carta)).subscribe(resp => {
-            this.cartas = resp;
+            this.cartas = resp.length ? resp : null;
+            this.pesquisado = true;
         })
     }
     

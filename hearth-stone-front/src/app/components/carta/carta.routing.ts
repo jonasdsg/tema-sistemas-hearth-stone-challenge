@@ -13,7 +13,12 @@ import { CartaCadastroComponent } from './cadastro/carta-cadastro-component';
             {
                 path: 'pesquisar',
                 component: CartaPesquisaComponent
+            },
+            {
+                path: '**',
+                redirectTo: 'cadastrar'
             }
+
         ])
     ]
 })

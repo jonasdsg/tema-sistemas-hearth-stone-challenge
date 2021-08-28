@@ -8,8 +8,9 @@
     (aoEmitirCarta)="pesquisar($event)">
 </carta-component>
 <div class="container mt-4">
+    <p class="row alert alert-warning" *ngIf="pesquisado && !cartas">Não foram encontradas cartas para este filtro!</p>
     <div class="row">
-        <div class="card col-md-3" style="width: 18rem;"  *ngFor="let carta of cartas">
+        <div class="card col-md-3 mt-2" style="width: 18rem;"  *ngFor="let carta of cartas">
             <img [src]="getLink(carta.classe)" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">{{carta.nome}}</h5>  
