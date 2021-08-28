@@ -1,3 +1,6 @@
+<div class="container">
+    <p *ngIf="info" class="alert" [ngClass]="info.alerta">{{info.message}}</p>
+</div>
 <carta-component
     nomeDoBotao="Cadastrar"
     nomeDaTela="Cadastrar Nova Carta"
