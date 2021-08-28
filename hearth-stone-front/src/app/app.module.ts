@@ -1,3 +1,4 @@
+import { CartaModule } from './components/carta/carta.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -10,7 +11,8 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     BrowserModule,
-    RouterModule
+    RouterModule,
+    CartaModule
   ],
   providers: [],
   bootstrap: [AppComponent]
