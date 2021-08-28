@@ -2,6 +2,7 @@
     <header>
         <h1>{{nomeDaTela}}</h1>
         <div class="d-flex flex-row justify-content-end">
+            <button *ngIf="ehPesquisa" class="btn btn-secondary mr-2" (click)="limparFormulario()">Limpar</button>
             <button class="btn btn-dark" (click)="emitir()">{{nomeDoBotao}}</button>
         </div>
     </header>
@@ -30,6 +31,7 @@
         <div class="form-group col-md-3 ">
             <label><strong>Ataque</strong></label>
             <select class="form-control" name="ataque" id="ataque" formControlName="ataque">
+                <option *ngIf="ehPesquisa" [value]="nulo">Todos</option>
                 <option [value]="valor" *ngFor="let valor of valores">{{valor}}</option>
             </select>
 
@@ -37,18 +39,21 @@
         <div class="form-group col-md-3 ">
             <label><strong>Defesa</strong></label>
             <select class="form-control" name="defesa" id="defesa" formControlName="defesa">
+                <option *ngIf="ehPesquisa" [value]="nulo">Todos</option>
                 <option [value]="valor" *ngFor="let valor of valores">{{valor}}</option>
             </select>
         </div>
         <div class="form-group col-md-3 ">
             <label><strong>Tipo</strong></label>
             <select class="form-control" name="tipo" id="tipo" formControlName="tipo">
+                <option *ngIf="ehPesquisa" [value]="nulo">Todos</option>
                 <option [value]="tipo" *ngFor="let tipo of tipos">{{tipo}}</option>
             </select>
         </div>
         <div class="form-group col-md-3 ">
             <label><strong>Classe</strong></label>
             <select class="form-control" name="classe" id="classe" formControlName="classe">
+                <option *ngIf="ehPesquisa" [value]="nulo">Todos</option>
                 <option [value]="classe" *ngFor="let classe of classes">{{classe}}</option>
             </select>
         </div>

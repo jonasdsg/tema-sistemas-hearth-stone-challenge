@@ -10,7 +10,9 @@ export class CartaComponent implements OnChanges {
     @Input() nomeDaTela: string = null;
     @Input() nomeDoBotao: string = null;
     @Input() carta: Carta = null;
+    @Input() ehPesquisa:boolean = false;
     @Output() aoEmitirCarta = new EventEmitter<Carta>();
+    public nulo = null;
     public tipos = TIPO;
     public classes = CLASSE;
     public cartaForm: FormGroup = null;
@@ -27,6 +29,10 @@ export class CartaComponent implements OnChanges {
 
     emitir(carta: Carta) {
         this.aoEmitirCarta.emit(this.cartaForm.getRawValue() as Carta);
+    }
+
+    limparFormulario(){
+        this.cartaForm.reset();
     }
 
     private criarFormulario(carta?: Carta): FormGroup {
