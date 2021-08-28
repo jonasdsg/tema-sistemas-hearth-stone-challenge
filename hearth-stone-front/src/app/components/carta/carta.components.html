@@ -1,0 +1,56 @@
+<header>
+    <h1>{{nomeDaTela}}</h1>
+    <div class="d-flex flex-row justify-content-end">
+        <button class="btn btn-dark">{{nomeDoBotao}}</button>
+    </div>
+</header>
+<form class="container" *ngIf="cartaForm">
+    <section class="row">
+        <header>
+            <h2>Informações básicas:</h2>
+        </header>
+        <main>
+            <div class="form-group" *ngIf="carta">
+                <label><strong>Id</strong></label>
+                <input class="form-control" type="text" name="id" id="id" formControlName="id">
+            </div>
+            <div class="form-group">
+                <label><strong>Nome</strong></label>
+                <input class="form-control" type="text" name="nome" id="nome" formControlName="nome">
+            </div>
+            <div class="form-group">
+                <label><strong>Descrição</strong></label>
+                <input class="form-control" type="text" name="descricao" id="descricao" formControlName="descricao">
+            </div>
+        </main>
+    </section>
+    <section class="row">
+        <header>
+            <h2>Atributos</h2>
+        </header>
+        <main>
+            <div class="form-group">
+                <label><strong>Ataque</strong></label>
+                <input class="form-control" type="text" name="ataque" id="ataque" formControlName="ataque">
+            </div>
+            <div class="form-group">
+                <label><strong>Defesa</strong></label>
+                <input class="form-control" type="text" name="defesa" id="defesa" formControlName="defesa">
+            </div>
+            <div class="form-group">
+                <label><strong>Tipo</strong></label>
+                <select class="form-control" name="tipo" id="tipo" formControlName="tipo">
+                    <option value="tipo" *ngFor="let tipo of tipos">{{tipo}}</option>
+                </select>
+            </div>     
+            <div class="form-group">
+                <label><strong>Classe</strong></label>
+                <select class="form-control" name="classe" id="classe" formControlName="classe">
+                    <option value="classe" *ngFor="let classe of classes">{{classe}}</option>
+                </select>
+            </div> 
+        </main>
+
+    </section>
+
+</form>
