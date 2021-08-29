@@ -1,0 +1,28 @@
+# tema-sistemas-hearth-stone-challenge
+Desafio proposto por Tema sistemas, consiste na criação de uma API que gerencie cartas de magic
+
+## Cenário ##
+_O jogo HearthStone é um jogo de cartas onde cada oponente precisa eliminar o
+outro. Ele é jogado em turnos e cada jogador recebe suas cartas, que são divididas em
+classes (Mago, Paladino, Caçador, Druida e “qualquer classe”)._
+
+- As cartas podem ser de criaturas ou de magias e possuem seu custo em mana,
+podendo ser de zero a dez. Há uma descrição da ação da carta, um nome e seu
+poder de dano e defesa.
+
+- Cada jogador pode montar um baralho com até 30 cartas da sua classe ou cartas
+que permitem qualquer classe. É permitido no máximo duas cartas iguais no
+mesmo baralho.
+
+## Desafio ##
+- Criar  uma  API  Rest  com o path “/carta”  usando  JAXRS  para  cadastrar,  consultar  e 
+excluir uma carta. Permitir consultar uma carta por nome, id, classe ou tipo. Utilize os 
+padrões de mercado para criação da API Rest. 
+
+## Realizando a build ##
+Para executar esse projeto, você deve clonar este repositório e seguir as seguintes orientações:
+ - [Como compilar o Backend](https://github.com/jonasdsg/tema-sistemas-hearth-stone-challenge/tree/main/hearth-stone-back#readme)
+ - [Como compilar o Frontend](https://github.com/jonasdsg/tema-sistemas-hearth-stone-challenge/tree/main/hearth-stone-front#readme)https://github.com/jonasdsg/tema-sistemas-hearth-stone-challenge/tree/main/hearth-stone-front#readme
+
+## Acessando projeto já compilado
+Para acessar o app basta clicar [Neste link](https://jonasdsg.github.io/hs-tema-sistemas-compilado/tema-sistemas-hearth-stone-challenge/)
