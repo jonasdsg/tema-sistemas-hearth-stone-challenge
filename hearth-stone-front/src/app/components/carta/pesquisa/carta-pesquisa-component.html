@@ -15,7 +15,10 @@
             <div class="card-body">
               <h5 class="card-title">{{carta.nome}}</h5>  
               <p class="card-text">{{carta.descricao}}</p>
-              <button class="btn btn-primary" (click)="detalhe(carta.id)">Detalhes</button>
+              <nav class="d-flex flex-row justify-content-between">
+                <button class="btn btn-primary" (click)="detalhe(carta.id)">Detalhes</button>
+                <button class="btn btn-danger" (click)="deletar(carta.id)">Excluir</button>
+              </nav>
             </div>
         </div>
     </div>
