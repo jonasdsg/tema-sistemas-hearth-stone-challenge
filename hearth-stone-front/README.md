@@ -1,27 +1,20 @@
 # HearthStoneFront
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.3.
+Este projeto foi feito com  [Angular CLI](https://github.com/angular/angular-cli) version 10.2.3.
 
-## Development server
+## Requisitos Minimos
+- 4GB de memória RAM
+- 500MB de espaço em disco
+- NodeJS versão 10 ou superior [Download](https://nodejs.org/en/)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Compilando o projeto
+- Clone o repositório
+- Acesse o diretório hearth-stone-front
+- execute o comando **npm install** para baixar as dependências.
+- após finalizar, execute **npm start** para compilar
+- Abra o navegador e acesse o endereco http://localhost:4200/
 
-## Code scaffolding
+**Ao acessar o endereço, a seguinte tela deverá ser apresentada**
+![image](https://user-images.githubusercontent.com/46661562/131259047-49320e96-7b0b-4639-abe8-0f5529b0ca39.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+**Obs** _Confira no console do navagador(F12) se não há erros_
