@@ -25,4 +25,5 @@ Para executar esse projeto, você deve clonar este repositório e seguir as segu
  - [Como compilar o Frontend](https://github.com/jonasdsg/tema-sistemas-hearth-stone-challenge/tree/main/hearth-stone-front#readme)
 
 ## Acessando projeto já compilado
-Para acessar o app basta clicar [Neste link](https://jonasdsg.github.io/tema-sistemas-hearth-stone-challenge/tema-sistemas-hearth-stone-challenge/cadastrar)
+Você pode testar o app já publicado [Neste link aqui](https://jonasdsg.github.io/tema-sistemas-hearth-stone-challenge/)
+Ou fazer requisições para o backend para https://hs-tema-challenge.herokuapp.com/carta
