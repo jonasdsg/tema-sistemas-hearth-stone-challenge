@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Carta, IMAGENS } from './../../../models/Carta.model';
 import { CartaService } from './../carta.service';
 import { Component } from "@angular/core";
@@ -8,10 +9,10 @@ import { Component } from "@angular/core";
 export class CartaPesquisaComponent {
     public info: any = null;
     public cartas: Carta[]
-    public atributos = ['ataque', 'defesa', 'tipo', 'classe'];
+    //public atributos = ['ataque', 'defesa', 'tipo', 'classe'];
     public imagens = IMAGENS;
     public pesquisado = false;
-    constructor(private cartaService: CartaService) { }
+    constructor(private cartaService: CartaService,private router:Router) { }
 
     pesquisar(carta: Carta) {
         this.cartaService.procurar(this.getParams(carta)).subscribe(resp => {
@@ -26,6 +27,10 @@ export class CartaPesquisaComponent {
 
     getValordoAtributo(atributo: string, carta: Carta) {
         return `${atributo.toUpperCase()}: ${carta[atributo]}`;
+    }
+    
+    detalhe(id:number){
+        this.router.navigate(['detalhe',id]);
     }
 
     private getParams(carta: Carta) {

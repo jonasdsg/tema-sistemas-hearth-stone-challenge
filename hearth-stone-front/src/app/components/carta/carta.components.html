@@ -2,6 +2,7 @@
     <header>
         <h1>{{nomeDaTela}}</h1>
         <div class="d-flex flex-row justify-content-end">
+            <button *ngIf="edicaoHabilitada" class="btn btn-dark mr-2" (click)="habilitarEdicao()">Editar</button>
             <button *ngIf="ehPesquisa" class="btn btn-secondary mr-2" (click)="limparFormulario()">Limpar</button>
             <button class="btn btn-dark" (click)="emitir()">{{nomeDoBotao}}</button>
         </div>

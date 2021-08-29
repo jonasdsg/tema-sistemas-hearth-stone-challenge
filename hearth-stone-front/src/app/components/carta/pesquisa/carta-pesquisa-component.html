@@ -15,10 +15,8 @@
             <div class="card-body">
               <h5 class="card-title">{{carta.nome}}</h5>  
               <p class="card-text">{{carta.descricao}}</p>
+              <button class="btn btn-primary" (click)="detalhe(carta.id)">Detalhes</button>
             </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item" *ngFor="let atributo of atributos">{{getValordoAtributo(atributo,carta)}}</li>
-            </ul>
         </div>
     </div>
 </div>

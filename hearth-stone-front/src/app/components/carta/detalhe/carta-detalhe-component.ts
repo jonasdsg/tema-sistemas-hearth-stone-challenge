@@ -8,7 +8,8 @@ import { switchMap } from 'rxjs/operators'
 })
 export class CartaDetalheComponent implements OnInit{
     public carta:Carta;
-
+    public info:any = null;
+    public habilitarEdicao:boolean = true;
     constructor(
         private cartaService:CartaService,
         private activatedRoute:ActivatedRoute,
@@ -32,6 +33,16 @@ export class CartaDetalheComponent implements OnInit{
     }
 
     atualizar(carta:Carta){
-        this.cartaService.atualizar(carta).subscribe(console.log);
+        this.info = {}
+        this.cartaService.atualizar(carta).subscribe(resp=>{
+            this.info.message = "Carta atualizada com sucesso!";
+            this.info.alerta = "alert-success";
+            this.habilitarEdicao = false;
+        },()=>{
+            this.info.message = "Erro ao  atualizar carta!";
+            this.info.alerta = "alert-danger";
+        });
+
+        setTimeout(()=>{this.info = null},3000);
     }
 }
