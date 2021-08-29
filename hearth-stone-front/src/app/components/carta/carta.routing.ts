@@ -1,3 +1,4 @@
+import { CartaDetalheComponent } from './detalhe/carta-detalhe-component';
 import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
 import { CartaPesquisaComponent } from './pesquisa/carta-pesquisa-component';
@@ -13,6 +14,10 @@ import { CartaCadastroComponent } from './cadastro/carta-cadastro-component';
             {
                 path: 'pesquisar',
                 component: CartaPesquisaComponent
+            },
+            {
+                path: 'detalhe/:id',
+                component:CartaDetalheComponent
             },
             {
                 path: '**',

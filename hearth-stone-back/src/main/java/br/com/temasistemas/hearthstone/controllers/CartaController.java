@@ -30,6 +30,15 @@ public class CartaController {
     @Autowired
     private CartaService service;
     
+    @GetMapping("/{id}")
+    public ResponseEntity<CartaDTO> procurarPorId(@PathVariable("id") Long id){
+        if(isNull(id)){
+            return ResponseEntity.badRequest().build();
+        }
+
+        return ResponseEntity.ok().body(service.procurarPorId(id));
+    }
+
     @GetMapping
     public ResponseEntity<List<CartaDTO>> procurar(
         @PathParam("id") Long id,

@@ -35,4 +35,8 @@ public class CartaService {
         cartaRepository.deleteById(id);
     }
 
+    public CartaDTO procurarPorId(Long id) {
+        return cartaMapper.toDTO(cartaRepository.findById(id).get());
+    }
+
 }

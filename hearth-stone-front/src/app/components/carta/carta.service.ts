@@ -9,9 +9,13 @@ import { Carta } from 'src/app/models/Carta.model';
 })
 export class CartaService {
     private baseUrl = BASE_URL+"carta";
- 
+    
     constructor(private http:HttpClient){}
     
+    procurarPorId(id:number):Observable<Carta>{
+        return this.http.get(`${this.baseUrl}/${id}`,OPTIONS) as unknown as Observable<Carta>;
+    }
+
     procurar(params:any){
         const procura = OPTIONS;
         procura.params = params;
