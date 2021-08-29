@@ -22,7 +22,7 @@ padrões de mercado para criação da API Rest.
 ## Realizando a build ##
 Para executar esse projeto, você deve clonar este repositório e seguir as seguintes orientações:
  - [Como compilar o Backend](https://github.com/jonasdsg/tema-sistemas-hearth-stone-challenge/tree/main/hearth-stone-back#readme)
- - [Como compilar o Frontend](https://github.com/jonasdsg/tema-sistemas-hearth-stone-challenge/tree/main/hearth-stone-front#readme)https://github.com/jonasdsg/tema-sistemas-hearth-stone-challenge/tree/main/hearth-stone-front#readme
+ - [Como compilar o Frontend](https://github.com/jonasdsg/tema-sistemas-hearth-stone-challenge/tree/main/hearth-stone-front#readme)
 
 ## Acessando projeto já compilado
-Para acessar o app basta clicar [Neste link](https://jonasdsg.github.io/hs-tema-sistemas-compilado/tema-sistemas-hearth-stone-challenge/)
+Para acessar o app basta clicar [Neste link](https://jonasdsg.github.io/tema-sistemas-hearth-stone-challenge/tema-sistemas-hearth-stone-challenge/cadastrar)
