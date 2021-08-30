@@ -21,9 +21,11 @@ padrões de mercado para criação da API Rest.
 
 ## Realizando a build ##
 Para executar esse projeto, você deve clonar este repositório e seguir as seguintes orientações:
- - [Como compilar o Backend](https://github.com/jonasdsg/tema-sistemas-hearth-stone-challenge/tree/main/hearth-stone-back#readme)
  - [Como compilar o Frontend](https://github.com/jonasdsg/tema-sistemas-hearth-stone-challenge/tree/main/hearth-stone-front#readme)
-
+ - *Para o backend você pode optar entre a versão com SpringBoot(Recomendado) ou JAX-RS 
+ - - [Como compilar o Backend SpringBoot](https://github.com/jonasdsg/tema-sistemas-hearth-stone-challenge/tree/main/hearth-stone-back#readme)
+ - - [Como compilar o Backend JAX-RS](https://github.com/jonasdsg/tema-sistemas-hearth-stone-challenge/tree/main/hearth-stone-jaxrs#readme)
+ 
 ## Acessando projeto já compilado
 Você pode testar o app já publicado [Neste link aqui](https://jonasdsg.github.io/tema-sistemas-hearth-stone-challenge/)
 Ou fazer requisições para o backend para https://hs-tema-challenge.herokuapp.com/carta
